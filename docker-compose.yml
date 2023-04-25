@@ -1,0 +1,17 @@
+services:
+  api:
+    image: tomyj/youtube-converter-backend
+    ports:
+      - "6969:6969"
+    networks: 
+      - youtube-converter-network
+  front:
+    image: tomyj/youtube-converter-frontend
+    ports:
+      - "80:3000"
+    networks:
+      - youtube-converter-network
+
+networks:
+  youtube-converter-network:
+    driver: bridge
