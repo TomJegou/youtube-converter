@@ -4,6 +4,10 @@ services:
     build:
       context: ./youtube-converter-backend
       dockerfile: api.Dockerfile
+    networks:
+      youtube-converter-network:
+        aliases:
+          - api
     ports:
       - "6969:6969"
   front:
@@ -11,5 +15,13 @@ services:
     build:
       context: ./youtube-converter-frontend
       dockerfile: front.Dockerfile
+    networks:
+      youtube-converter-network:
+        aliases:
+          - front
     ports:
-      - "80:3000"
+      - "80:80"
+
+networks:
+  youtube-converter-network:
+    driver: bridge
