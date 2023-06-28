@@ -8,8 +8,11 @@ services:
       youtube-converter-network:
         aliases:
           - api
-    ports:
-      - "6969:6969"
+    volumes:
+      - type: bind
+        source: ./youtube-converter-backend/downloads
+        target: /app/downloads
+
   front:
     image: tomyj/youtube-converter-frontend
     build:
