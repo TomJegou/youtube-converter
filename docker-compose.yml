@@ -8,11 +8,6 @@ services:
       youtube-converter-network:
         aliases:
           - api
-    volumes:
-      - type: bind
-        source: ./youtube-converter-backend/downloads
-        target: /app/downloads
-
   front:
     image: tomyj/youtube-converter-frontend
     build:
