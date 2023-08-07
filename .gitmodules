@@ -1,6 +1,0 @@
-[submodule "youtube-converter-frontend"]
-	path = youtube-converter-frontend
-	url = https://github.com/TomJegou/youtube-converter-frontend.git
-[submodule "youtube-converter-backend"]
-	path = youtube-converter-backend
-	url = https://github.com/TomJegou/youtube-converter-backend.git
