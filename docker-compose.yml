@@ -6,8 +6,6 @@ services:
       dockerfile: backend.Dockerfile
     networks:
       youtube-converter-network:
-        aliases:
-          - backend
   front:
     image: tomyj/youtube-converter:frontend
     build:
@@ -15,11 +13,8 @@ services:
       dockerfile: front.Dockerfile
     networks:
       youtube-converter-network:
-        aliases:
-          - frontend
     ports:
       - "80:80"
-
 networks:
   youtube-converter-network:
     driver: bridge
