@@ -5,16 +5,18 @@ services:
       context: ./youtube-converter-backend
       dockerfile: backend.Dockerfile
     networks:
-      youtube-converter-network:
+      - youtube-converter-network
+    restart: on-failure
   front:
     image: tomyj/youtube-converter:frontend
     build:
       context: ./youtube-converter-frontend
       dockerfile: front.Dockerfile
     networks:
-      youtube-converter-network:
+      - youtube-converter-network
     ports:
       - "80:80"
+    restart: on-failure
 networks:
   youtube-converter-network:
     driver: bridge
