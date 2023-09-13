@@ -1,5 +1,6 @@
 services:
   backend:
+    container_name: youtube-converter-backend
     image: tomyj/youtube-converter:backend
     build:
       context: ./youtube-converter-backend
@@ -7,7 +8,8 @@ services:
     networks:
       - youtube-converter-network
     restart: on-failure
-  front:
+  frontend:
+    container_name: youtube-converter-frontend
     image: tomyj/youtube-converter:frontend
     build:
       context: ./youtube-converter-frontend
