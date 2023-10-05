@@ -1,7 +1,7 @@
 services:
   backend:
     container_name: youtube-converter-backend
-    image: tomyj/youtube-converter:backend
+    image: tomyj/my-env:youtube-converter-backend
     build:
       context: ./youtube-converter-backend
       dockerfile: backend.Dockerfile
@@ -10,7 +10,7 @@ services:
     restart: on-failure
   frontend:
     container_name: youtube-converter-frontend
-    image: tomyj/youtube-converter:frontend
+    image: tomyj/my-env:youtube-converter-frontend
     build:
       context: ./youtube-converter-frontend
       dockerfile: front.Dockerfile
