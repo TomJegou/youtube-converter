@@ -7,7 +7,7 @@ services:
       dockerfile: backend.Dockerfile
     networks:
       - youtube-converter-network
-    restart: on-failure
+    restart: always
   frontend:
     container_name: youtube-converter-frontend
     image: tomyj/my-env:youtube-converter-frontend
@@ -18,7 +18,7 @@ services:
       - youtube-converter-network
     ports:
       - "45450:45450"
-    restart: on-failure
+    restart: always
 networks:
   youtube-converter-network:
     driver: bridge
