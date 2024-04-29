@@ -5,20 +5,13 @@ services:
     build:
       context: ./youtube-converter-backend
       dockerfile: backend.Dockerfile
-    networks:
-      - youtube-converter-network
     restart: unless-stopped
   frontend:
     container_name: youtube-converter-frontend
     image: tomyj/my-env:youtube-converter-frontend
     build:
-      context: ./youtube-converter-frontend
-      dockerfile: front.Dockerfile
-    networks:
-      - youtube-converter-network
+      context: ./youtube-converter-frontend-v2
+      dockerfile: Dockerfile
     ports:
       - "45450:45450"
     restart: unless-stopped
-networks:
-  youtube-converter-network:
-    driver: bridge
