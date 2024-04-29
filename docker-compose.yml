@@ -1,10 +1,10 @@
 services:
-  backend:
+  api:
     container_name: youtube-converter-backend
     image: tomyj/my-env:youtube-converter-backend
     build:
       context: ./youtube-converter-backend
-      dockerfile: backend.Dockerfile
+      dockerfile: Dockerfile
     restart: unless-stopped
   frontend:
     container_name: youtube-converter-frontend
