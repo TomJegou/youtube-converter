@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(request: NextRequest, response: NextResponse) {
+export async function POST(request: NextRequest) {
     let apiHostname = "localhost:46460"
     if (process.env.API_HOSTNAME) {
         apiHostname = process.env.API_HOSTNAME
