@@ -1,0 +1,6 @@
+downloads/*
+!files/.gitkeep
+!files/yt-dlp
+bin/**/*
+!bin/.gitkeep
+.vscode

@@ -1,0 +1,8 @@
+services:
+  api:
+    image: tomyj/my-env:youtube-converter-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "46460:46460"
