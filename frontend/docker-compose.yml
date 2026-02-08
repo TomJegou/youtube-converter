@@ -1,0 +1,10 @@
+services:
+  frontend:
+    container_name: youtube-converter-frontend
+    image: tomyj/my-env:youtube-converter-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "45450:45450"
+    restart: unless-stopped
