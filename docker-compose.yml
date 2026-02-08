@@ -3,14 +3,14 @@ services:
     container_name: youtube-converter-backend
     image: tomyj/my-env:youtube-converter-backend
     build:
-      context: ./youtube-converter-backend
+      context: ./backend
       dockerfile: Dockerfile
     restart: unless-stopped
   frontend:
     container_name: youtube-converter-frontend
     image: tomyj/my-env:youtube-converter-frontend
     build:
-      context: ./youtube-converter-frontend-v2
+      context: ./frontend
       dockerfile: Dockerfile
     ports:
       - "45450:45450"

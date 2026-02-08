@@ -3,4 +3,3 @@ downloads/*
 !files/yt-dlp
 bin/**/*
 !bin/.gitkeep
-.vscode
